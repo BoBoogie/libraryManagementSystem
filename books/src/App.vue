@@ -18,9 +18,12 @@ export default {
 <style>
 * {
   margin: 0;
-  padding: 0
+  padding: 0;
+  caret-color:transparent;
 }
-
+input{
+  caret-color: blue;
+}
 a {
   text-decoration: none;
 }

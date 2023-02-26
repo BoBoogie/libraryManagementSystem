@@ -15,6 +15,9 @@
            <el-form-item label="图书编号" prop="bookid">
              <el-input v-model="ruleForm.bookid"></el-input>
            </el-form-item>
+          <el-form-item label="图书位置" prop="booklocation">
+            <el-input v-model="ruleForm.booklocation"></el-input>
+          </el-form-item>
             <el-form-item label="价格" prop="price">
              <el-input v-model="ruleForm.price"></el-input>
            </el-form-item>
@@ -42,9 +45,8 @@ export default {
           author:'',
           company: '',
           bookid:'',
-          price:'',
-          booknumber:''
-
+          booklocation:'',
+          price:''
         },
         rules: {
           bookname: [
@@ -59,6 +61,9 @@ export default {
           bookid: [
             { required: true,pattern:/^\S{1,8}\-\d{1,5}$/, message: '图书编号须为xx-xx', trigger: 'blur' }
           ],
+          booklocation: [
+            {required: true, pattern:/^\d\u697c\w\u67b6\d\u5c42\d\u53f7$/, message: '图书位置须为x楼x架x层x号', trigger: 'blur' }
+          ],
           price: [
             {required: true, pattern:/^\d{1,6}\.\d{2}$/, message: '价格须为x.xx', trigger: 'blur' }
           ]
@@ -70,7 +75,7 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$refs.file.files[0]==undefined ? Message.warning('还未上传图片'): this.sendBookData();
+            this.$refs.file.files[0]===undefined ? Message.warning('还未上传图片'): this.sendBookData();
           } else {
             console.log('error submit!!');
             return false;

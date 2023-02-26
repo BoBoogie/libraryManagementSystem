@@ -61,22 +61,22 @@ export default {
               this.quantity.push(res.data.data[key])
             }
             this.softClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'A'
+              return item.bookid.slice(0, 1) === 'A'
             })
             this.manageClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'B'
+              return item.bookid.slice(0, 1) === 'B'
             })
             this.popularClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'C'
+              return item.bookid.slice(0, 1) === 'C'
             })
             this.biologyClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'D'
+              return item.bookid.slice(0, 1) === 'D'
             })
             this.hardwareClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'E'
+              return item.bookid.slice(0, 1) === 'E'
             })
             this.mathClass = this.quantity.filter((item) => {
-              return item.booknumber.slice(0, 1) === 'F'
+              return item.bookid.slice(0, 1) === 'F'
             })
 
             let dom = document.querySelector('.bookClassification');

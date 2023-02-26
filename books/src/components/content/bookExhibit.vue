@@ -10,6 +10,7 @@
                  <div id="company"> 出版社：{{item.company}}</div>
                  <div id="bookNum">图书编号：{{item.bookid}}</div>
              </div>
+            <div id="bookLocation">图书位置：{{item.booklocation}}</div>
              <div class="price">价格：￥{{item.price}}</div>
               <div class="bookDate" v-if="showDate">
                   <div id="lendDate">借阅日期:{{item.lenddate | formatDate}}</div>
@@ -211,7 +212,7 @@ export default {
     color: rgb(92, 92, 86);
   text-shadow: 0 0 1px rgb(114, 152, 202);
 }
-.price{
+.price,#bookLocation{
     margin-right: 30px;
     line-height: 100px;
   text-shadow: 0 0 5px rgb(10, 77, 165);

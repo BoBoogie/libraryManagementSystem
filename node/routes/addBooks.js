@@ -11,7 +11,7 @@ addBooks.post('/addbooks', (req, res) => {
     // 判断图书编号是否存在
     booksystem.query('select count(*) as num from books where bookid=?', [bookData.bookid], (err, result) => {
       if (result[0].num == 0) {
-        bookData.booknumber = bookData.bookid.split('-')[0];
+
         // 要保存的文件名
         bookData.picname = bookData.bookid + '.jpg';
         // 数据库添加记录

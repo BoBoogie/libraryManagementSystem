@@ -12,6 +12,7 @@
           <div id="company"> 出版社：{{ item.company }}</div>
           <div id="bookNum">图书编号：{{ item.bookid }}</div>
         </div>
+        <div id="bookLocation">图书位置：{{item.booklocation}}</div>
         <div class="bookDate">
           <div id="lendDate">借阅日期:{{ item.lenddate | formatDate }}</div>
           <div id="returnDate">应还日期:{{ item.returndate | formatDate }}</div>
@@ -155,7 +156,7 @@ export default {
   flex: 1;
 }
 
-.bookDate {
+.bookDate,#bookLocation {
   display: flex;
   width: 300px;
   flex-direction: column;

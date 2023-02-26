@@ -15,6 +15,7 @@
           <div id="company"> 出版社：{{ item.company }}</div>
           <div id="bookNum">图书编号：{{ item.bookid }}</div>
         </div>
+        <div id="bookLocation">图书位置：{{item.booklocation}}</div>
         <div class="price">价格：￥{{ item.price }}</div>
         <div class="bookStatus">
           <div id="num">馆藏数量:{{ item.sum }}本</div>
@@ -155,7 +156,7 @@ export default {
   margin: 10px 0;
 }
 
-.price {
+.price,#bookLocation {
   line-height: 100px;
   margin-right: 30px;
 }
